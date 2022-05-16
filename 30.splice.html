@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre class="rect"></pre>
+    <script>
+        const rect = document.querySelector(".rect");
+        const ar = "abcdefghi".split("");
+
+        let br = [...ar];
+
+        rect.innerHTML += JSON.stringify(br.splice(2, 3)) + "\n"; // Deleting
+        rect.innerHTML += JSON.stringify(br) + "\n";
+        rect.innerHTML += "------------------\n"
+
+        br = [...ar];
+
+        rect.innerHTML += JSON.stringify(br.splice(2, 0, "Bill", "Peter")) + "\n"; // Inserting
+        rect.innerHTML += JSON.stringify(br) + "\n";
+        rect.innerHTML += "------------------\n";
+
+        br = [...ar];
+
+        rect.innerHTML += JSON.stringify(br.splice(2, 2, "Bill", "Peter")) + "\n"; // Replacing
+        rect.innerHTML += JSON.stringify(br) + "\n";
+    </script>
+</body>
+
+</html>

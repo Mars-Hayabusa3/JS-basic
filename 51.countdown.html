@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rect"></div>
+    <script>
+        const rect = document.querySelector(".rect");
+
+        const now = new Date();
+        const Deadline1 = new Date("2022-08-24");
+        const Deadline2 = new Date(2022, 7, 24);
+        const Deadline3 = new Date(2022, 7, 24, 10, 0, 0);
+
+        let diff = Deadline3 - now;
+        const days = parseInt (diff / (24*60*60000));
+        console.log(diff / (24*60*60000));
+
+        rect.innerHTML = `<h2>離結訓還有 ${days} 天</h2>`;
+    </script>
+</body>
+</html>

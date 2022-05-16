@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre class="rect"></pre>
+    <script>
+        const rect = document.querySelector(".rect");
+        const arr = [
+            { name: "David", age: 25 },
+            { name: "Carl", age: 30 },
+            { name: "Bill", age: 28 },
+        ];
+
+        // Sort these people by their ages
+        function sortAge(a, b) {
+            return a.age - b.age;
+        }
+
+        // Sort by their names
+        function sortName(a, b) {
+            return a.name < b.name ? -1 : 1;
+        }
+        // console.log(sortName(arr[0], arr[1]));
+
+        arr.sort(sortName);
+        rect.innerHTML = JSON.stringify(arr, null, 4);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: rgb(248, 232, 232);
+            border: 1px solid black;
+        }
+
+        .ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(245, 52, 52);
+            color: white;
+            font-weight: 800;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rect">
+        <!-- <div class="ball"></div> -->
+    </div>
+    <script>
+        const rect = document.querySelector(".rect");
+        let b; // 操控球生成的變數
+        let n = 0;
+
+        for (let k = 0; k < 8; k++) {            // 橫排的索引值
+            for (let i = 0; i < 6; i++) {        // 直排的索引值
+                b = document.createElement("div");
+                b.className = "ball";
+                b.style.top = i * 55 + "px";
+                b.style.left = k * 55 + "px";
+                // b.innerHTML = k + 1;
+
+                n++;
+                b.innerHTML = n;
+
+                rect.appendChild(b); // 重要！讓 b (div.ball) 在 rect 內生成
+            }
+        }
+    </script>
+</body>
+
+</html>

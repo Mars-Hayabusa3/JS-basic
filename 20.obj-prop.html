@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="rect"></div>
+    <script>
+        const rect = document.querySelector(".rect");
+        const p1 = {
+            name: "Simone",
+            age: 70,
+            id: 3
+        }
+        const p2 = {
+            name: "Jean-Paul",
+            age: 20,
+            id: 18
+        }
+
+        let { name, age } = p1; // 展開設定
+        console.log(name, age);
+
+        // ({ name, age } = p2); // 展開設定
+        // console.log(name, age);
+
+        const gender = "female";
+        const p3 = { name, age, gender };
+        console.log(p3);
+        console.log({ name, age, gender });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inp" />
+    <button onclick="func()">Click!</button>
+    <p id="info"></p>
+    <script>
+        const inp = document.querySelector('#inp');
+        function func() {
+            const pandamicCase = +inp.value;
+            let r;
+            if (pandamicCase >= 15000) {
+                r = "疫情極為嚴重";
+            } else if (pandamicCase >= 10000) {
+                r = '疫情嚴重';
+            } else if (pandamicCase >= 5000) {
+                r = '疫情中等嚴重';
+            } else if (pandamicCase >= 500) {
+                r = '疫情開始增加';
+            } else if (pandamicCase >= 100) {
+                r = '疫情輕微';
+            } else if (pandamicCase >= 10) {
+                r = "無疫情";
+            } else {
+                r = '數字不合理';
+            }
+            info.innerText = r
+        }
+    </script>
+</body>
+
+</html>

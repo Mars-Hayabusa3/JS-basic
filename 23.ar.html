@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre class="rect"></pre>
+    <p>Français</p>
+    <p>Paris</p>
+    <p>Genève</p>
+    <script>
+        const rect = document.querySelector(".rect");
+        const ar = [55, "Louis XIV", true, 4, "Quatre cent coups"];
+        ar[10] = 100;
+
+        for (i = 0; i < ar.length; i++) {
+            console.log(`${i}: ${ar[i]}`);
+        }
+
+        console.log(`--------------------`);
+
+        for (let s in ar) {
+            console.log(`${s}: ${ar[s]}`);
+        }
+
+        console.log(`--------------------`);
+
+        for (let i of ar) {
+            console.log(i);
+        }
+        console.log(`--------------------`);
+
+        const p = document.querySelectorAll("p");
+        // P 是 NodeList, 可迭代的類型, 所以用 for/of
+        for (let i of p) {
+            console.log(i, i.innerText);
+        }
+    </script>
+</body>
+
+</html>
